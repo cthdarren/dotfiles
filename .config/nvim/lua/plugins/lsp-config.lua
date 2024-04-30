@@ -11,7 +11,7 @@ return {
         lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "html" },
+				ensure_installed = { "lua_ls", "tsserver", "html", "tailwindcss", "cssls" },
 			})
 		end,
 	},
@@ -29,6 +29,15 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
 
