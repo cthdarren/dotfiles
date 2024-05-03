@@ -33,6 +33,8 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					["<S-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i' , 'c'}), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					["<S-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c'}), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				sources = cmp.config.sources({
