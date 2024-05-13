@@ -28,4 +28,5 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll='ls -al --color=auto'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
+alias attachmon='xrandr --output HDMI1 --mode 1920x1080 --primary --right-of eDP1 && /home/darren/.config/bspwm/bspwmrc'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
