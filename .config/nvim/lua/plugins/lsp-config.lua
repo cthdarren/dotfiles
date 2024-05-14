@@ -49,6 +49,9 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.solargraph.setup({
+				capabilities = capabilities,
+			})
 
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
