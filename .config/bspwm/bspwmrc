@@ -8,8 +8,8 @@ feh --bg-fill ~/Pictures/naviaP.jpg &
 xsetroot -cursor_name left_ptr
 
 if [[ "$(xrandr | grep 'HDMI1 connected')" ]]; then
-    bspc monitor HDMI1 -d        
-    bspc monitor eDP1 -d  
+    bspc monitor HDMI1 -d      
+    bspc monitor eDP1 -d  
     bspc config top_padding 0
 else
     bspc monitor eDP1 -d        
