@@ -31,6 +31,6 @@ eval $(thefuck --alias)
 
 alias ll='ls -al --color=auto'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
-alias monattach='xrandr --output HDMI1 --mode 1920x1080 --primary --right-of eDP1 --output eDP1 --mode 1368x768 && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar --reload example &'
-alias mondetach='xrandr --output eDP1 --mode 1920x1080 --primary --output HDMI1 --off && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar --reload example &'
+alias monattach='xrandr --output HDMI1 --mode 1920x1080 --primary --right-of eDP1 --output eDP1 --mode 1368x768 && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar example &'
+alias mondetach='xrandr --output eDP1 --mode 1920x1080 --primary --output HDMI1 --off && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar example &'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
