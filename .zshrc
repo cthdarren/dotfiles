@@ -26,6 +26,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# for the fuck plugin
+eval $(thefuck --alias)
+
 alias ll='ls -al --color=auto'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
 alias monattach='xrandr --output HDMI1 --mode 1920x1080 --primary --right-of eDP1 --output eDP1 --mode 1368x768 && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar --reload example &'
