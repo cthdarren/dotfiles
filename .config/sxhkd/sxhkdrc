@@ -42,7 +42,7 @@ super + @BackSpace
 
 # application bindings
 super + F1
-  exec firefox
+  exec chromium 
 
 super + F2
   exec telegram-desktop
