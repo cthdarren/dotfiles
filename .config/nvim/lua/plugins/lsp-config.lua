@@ -1,17 +1,28 @@
 return {
 	{
 		"williamboman/mason.nvim",
-        lazy = false,
+		lazy = false,
 		config = function()
 			require("mason").setup()
 		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-        lazy = false,
+		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "html", "tailwindcss", "cssls", "gopls", "jdtls", "pyright", "clangd"},
+				ensure_installed = {
+					"lua_ls",
+					"tsserver",
+					"html",
+					"tailwindcss",
+					"cssls",
+					"gopls",
+					"jdtls",
+					"pyright",
+					"clangd",
+					"solargraph",
+				},
 			})
 		end,
 	},
@@ -23,7 +34,7 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({
-                capabitlies = capabilities,
+				capabitlies = capabilities,
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
@@ -51,8 +62,13 @@ return {
 			})
 			lspconfig.solargraph.setup({
 				capabilities = capabilities,
+				settings = {
+					solargraph = {
+						diagnostics = true,
+                        completion = true
+					},
+				},
 			})
-
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-,>", vim.lsp.buf.code_action, {})
