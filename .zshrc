@@ -31,6 +31,9 @@ eval $(thefuck --alias)
 
 alias ll='ls -al --color=auto'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
-alias monattach='xrandr --output HDMI1 --mode 1920x1080 --primary --right-of eDP1 --output eDP1 --mode 1368x768 && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar example &'
-alias mondetach='xrandr --output eDP1 --mode 1920x1080 --primary --output HDMI1 --off && /home/darren/.config/bspwm/bspwmrc && killall -q polybar && exec polybar example &'
+alias monattach='xrandr --output HDMI-1 --mode 1920x1080 --primary --right-of eDP-1 --output eDP-1 --mode 1368x768;/home/darren/.config/bspwm/bspwmrc;'
+alias mondetach='xrandr --output eDP-1 --mode 1920x1080 --primary --output HDMI-1 --off;/home/darren/.config/bspwm/bspwmrc;'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
