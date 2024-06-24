@@ -21,7 +21,7 @@ return {
 					"jdtls",
 					"pyright",
 					"clangd",
-					"solargraph",
+					"rubocop",
 				},
 			})
 		end,
@@ -32,6 +32,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+			local util = require("lspconfig.util")
 
 			lspconfig.lua_ls.setup({
 				capabitlies = capabilities,
@@ -60,15 +61,20 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.solargraph.setup({
+			lspconfig.rubocop.setup({
 				capabilities = capabilities,
-				settings = {
-					solargraph = {
-						diagnostics = true,
-                        completion = true
-					},
-				},
 			})
+			-- lspconfig.solargraph.setup({
+			-- 	capabilities = capabilities,
+			-- 	settings = {
+			-- 		solargraph = {
+			-- 			diagnostics = true,
+			-- 			completion = true,
+			-- 		},
+			-- 	},
+			-- 	root_dir = util.root_pattern("Gemfile", ".git"),
+			-- })
+            --
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-,>", vim.lsp.buf.code_action, {})
