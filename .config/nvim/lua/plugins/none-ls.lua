@@ -13,7 +13,7 @@ return {
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.black,
-				null_ls.builtins.formatting.rubyfmt,
+				null_ls.builtins.formatting.rubocop,
 			},
 		})
 		vim.keymap.set("n", "<A-F>", vim.lsp.buf.format, {})

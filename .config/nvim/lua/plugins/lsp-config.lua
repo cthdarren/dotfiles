@@ -21,7 +21,7 @@ return {
 					"jdtls",
 					"pyright",
 					"clangd",
-					"rubocop",
+					"solargraph",
 				},
 			})
 		end,
@@ -61,20 +61,17 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.rubocop.setup({
+			lspconfig.solargraph.setup({
 				capabilities = capabilities,
+				settings = {
+					solargraph = {
+						diagnostics = true,
+						completion = true,
+					},
+				},
+				root_dir = util.root_pattern("Gemfile", ".git"),
 			})
-			-- lspconfig.solargraph.setup({
-			-- 	capabilities = capabilities,
-			-- 	settings = {
-			-- 		solargraph = {
-			-- 			diagnostics = true,
-			-- 			completion = true,
-			-- 		},
-			-- 	},
-			-- 	root_dir = util.root_pattern("Gemfile", ".git"),
-			-- })
-            --
+
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-,>", vim.lsp.buf.code_action, {})
