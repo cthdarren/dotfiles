@@ -14,7 +14,6 @@ if [[ "$(xrandr | grep 'HDMI-1 connected')" ]]; then
     # bspc monitor eDP-1 -s HDMI-1
 else
     bspc monitor -d        
-    bspc config top_padding 45
 fi
 
 bspc config border_width         2
