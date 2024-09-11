@@ -7,7 +7,7 @@ return {
                 packages ={ enable = false},
                 footer = {},
                 shortcut = {},
-                project = {limit = 3},
+                project = {limit = 3, enable = false},
                 mru = {limit = 8},
 				header = {"",
 "⠀⠀⠀⠀⠀⠀⠀⡴⠶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡶⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
