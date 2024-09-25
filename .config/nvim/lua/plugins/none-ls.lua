@@ -14,6 +14,7 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.rubocop,
+				null_ls.builtins.formatting.r_language_server,
 			},
 		})
 		vim.keymap.set("n", "<A-F>", vim.lsp.buf.format, {})
