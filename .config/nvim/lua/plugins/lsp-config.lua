@@ -61,9 +61,6 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.r_language_server.setup({
-				capabilities = capabilities,
-			})
 			lspconfig.solargraph.setup({
 				capabilities = capabilities,
 				settings = {
