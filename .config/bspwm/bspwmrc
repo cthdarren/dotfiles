@@ -4,7 +4,7 @@ sxhkd &
 polybar & 
 dunst &
 picom -b &
-feh --bg-fill ~/Pictures/naviaP.jpg &
+feh --bg-fill ~/Pictures/sclera.jpg &
 xsetroot -cursor_name left_ptr
 
 if [[ "$(xrandr | grep 'HDMI-1 connected')" ]]; then
