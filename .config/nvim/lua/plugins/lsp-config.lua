@@ -61,6 +61,12 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.eslint.setup({
+                settings={
+                    packageManager = 'npm'
+                },
+				capabilities = capabilities,
+			})
 			lspconfig.solargraph.setup({
 				capabilities = capabilities,
 				settings = {
