@@ -31,6 +31,7 @@ source $ZSH/oh-my-zsh.sh
 eval $(thefuck --alias)
 
 alias ll='ls -al --color=auto'
+alias lk='ls -altr --color=auto'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
 alias connecthp='bluetoothctl connect 38:18:4C:5A:8B:A6'
 alias monattach='xrandr --output HDMI-1 --mode 1920x1080 --primary --right-of eDP-1 --output eDP-1 --mode 1368x768;/home/darren/.config/bspwm/bspwmrc;'
