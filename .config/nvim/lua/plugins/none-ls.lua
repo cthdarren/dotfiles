@@ -11,10 +11,10 @@ return {
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.formatting.prettier.with({
-                    extra_args = { 
-                        "--tab-width 4",
-                        "--bracket-same-line"
-
+                    extra_args = {
+                        "--tab-width", "4",
+                        "--bracket-same-line",
+                        "--trailing-comma", "none"
                     }
                 }),
 				null_ls.builtins.formatting.black,
