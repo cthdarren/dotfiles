@@ -17,11 +17,9 @@ return {
 					"html",
 					"tailwindcss",
 					"cssls",
-					"gopls",
 					"jdtls",
 					"pyright",
 					"clangd",
-					"solargraph",
 				},
 			})
 		end,
@@ -52,9 +50,6 @@ return {
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-			})
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
@@ -67,17 +62,6 @@ return {
                 },
 				capabilities = capabilities,
 			})
-			lspconfig.solargraph.setup({
-				capabilities = capabilities,
-				settings = {
-					solargraph = {
-						diagnostics = true,
-						completion = true,
-					},
-				},
-				root_dir = util.root_pattern("Gemfile", ".git"),
-			})
-
 
 			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-,>", vim.lsp.buf.code_action, {})
