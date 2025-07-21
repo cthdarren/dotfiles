@@ -1,5 +1,5 @@
 fastfetch #Add git ssh to keychain (ssh-agent)
-eval $(keychain --eval id_ed25519 github)
+eval $(keychain --eval id_ed25519)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -24,7 +24,6 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM 
 
 
 # for the fuck plugin
@@ -32,11 +31,10 @@ eval $(thefuck --alias)
 
 alias ll='ls -al --color=auto'
 alias lk='ls -altr --color=auto'
+alias gco='git checkout'
+alias gs='git status'
+alias ds='dotfiles status'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
 alias connecthp='bluetoothctl connect 38:18:4C:5A:8B:A6'
-alias monattach='xrandr --output HDMI-1 --mode 1920x1080 --primary --right-of eDP-1 --output eDP-1 --mode 1368x768;/home/darren/.config/bspwm/bspwmrc;'
-alias mondetach='xrandr --output eDP-1 --mode 1920x1080 --primary --output HDMI-1 --off;/home/darren/.config/bspwm/bspwmrc;'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin:$HOME/go/bin"
