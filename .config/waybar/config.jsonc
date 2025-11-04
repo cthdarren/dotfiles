@@ -106,8 +106,16 @@
     },
     "clock": {
         "timezone": "Asia/Singapore",
+        "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%a, %b %e | %I:%M %p}",
+        "format-alt": "{:%Y-%m-%d | %H:%M:%S}",
+        "calendar": {
+            "format": {
+                "today": "<b><span color='#ff0000'>{}</span></b>"
+            }
+
+        }
     },
     "cpu": {
         "format": " {usage}%",
@@ -184,7 +192,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        // "on-click": "pavucontrol"
+        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",
