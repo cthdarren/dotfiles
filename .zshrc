@@ -32,7 +32,7 @@ eval $(thefuck --alias)
 
 alias gs='git status'
 alias ll='ls -alh --color=auto'
-alias rough='nvim /home/darren/todotmr.md'
+alias rough='nvim /home/lingyuan/todotmr.md'
 alias lk='ls -altrh --color=auto'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
 alias connecthp='bluetoothctl connect 38:18:4C:5A:8B:A6'
@@ -42,3 +42,5 @@ alias vact='source venv/bin/activate'
 alias gco='git checkout'
 alias gpush='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gpull='git pull origin `git rev-parse --abbrev-ref HEAD`'
+
+. "$HOME/.local/bin/env"
