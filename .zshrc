@@ -38,9 +38,22 @@ alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
 alias connecthp='bluetoothctl connect 38:18:4C:5A:8B:A6'
 alias connectkb='bluetoothctl connect D9:D2:5F:C0:75:AC'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias vact='source venv/bin/activate'
 alias gco='git checkout'
 alias gpush='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gpull='git pull origin `git rev-parse --abbrev-ref HEAD`'
 
+vact() {
+  if [ -f ".venv/bin/activate" ]; then
+    source ./.venv/bin/activate
+  elif [ -f "venv/bin/activate" ]; then
+    source ./venv/bin/activate
+  else
+    echo "No .venv or venv directory found"
+  fi
+}
+
 . "$HOME/.local/bin/env"
+
+export NPM_CONFIG_PREFIX=~/.npm-global
+export PATH=$PATH:~/.npm-global/bin
+
