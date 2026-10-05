@@ -54,3 +54,8 @@ vact() {
 export NPM_CONFIG_PREFIX=~/.npm-global
 export PATH=$PATH:~/.npm-global/bin
 
+## To set system wide dark theme
+export GTK_THEME=Adwaita:dark 
+export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc 
+export QT_STYLE_OVERRIDE=Adwaita-Dark
+
