@@ -1,6 +1,7 @@
 fortune | cowsay > /home/lingyuan/fflogo.txt
 fastfetch --logo /home/lingyuan/fflogo.txt --logo-type file
 eval $(keychain --eval id_ed25519)
+eval $(thefuck --alias)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -21,14 +22,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
  
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-# for the fuck plugin
-eval $(thefuck --alias)
 
 alias gs='git status'
 alias ll='ls -alh --color=auto'
@@ -51,8 +50,6 @@ vact() {
     echo "No .venv or venv directory found"
   fi
 }
-
-. "$HOME/.local/bin/env"
 
 export NPM_CONFIG_PREFIX=~/.npm-global
 export PATH=$PATH:~/.npm-global/bin
