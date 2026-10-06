@@ -298,6 +298,8 @@ hl.bind(mainMod .. " + SHIFT + 8", hl.dsp.window.move({ workspace = 8 }))
 hl.bind(mainMod .. " + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
 hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
+hl.bind(mainMod .. " + backspace", hl.dsp.exec_cmd("hyprlock"))
+
 hl.bind(mainMod .. " + d", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + d", hl.dsp.window.move({ workspace = "special:magic" }))
 
@@ -315,6 +317,7 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
 
 hl.window_rule({
     match = {
