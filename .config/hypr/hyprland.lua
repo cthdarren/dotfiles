@@ -437,7 +437,10 @@ hl.config({
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
-    hl.exec_cmd("mpvpaper -o \"--aid=no --loop=inf\" DP-2 Wallpapers/1.mp4")
+    -- hl.exec_cmd("mpvpaper -o \"--aid=no --loop=inf no-audio\" DP-6 Wallpapers/qingxiao.mp4")
+    -- hl.exec_cmd("mpvpaper -o \"--aid=no --loop=inf no-audio\" eDP-1 Wallpapers/heart-lake.mp4")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 end)
+
 

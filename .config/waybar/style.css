@@ -9,7 +9,7 @@ window{
 }
 
 window#waybar {
-    background-color: rgba(26, 27, 38, 0.3);
+    background-color: rgba(26, 27, 38, 0.8);
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #c0caf5;
     /* transition-property: background-color; */
