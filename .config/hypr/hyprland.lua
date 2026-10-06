@@ -316,6 +316,7 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("F24", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 
@@ -329,7 +330,7 @@ hl.window_rule({
 hl.config({
     general = {
         no_focus_fallback = true,
-        gaps_in = 3,
+        gaps_in = 6,
         gaps_out = 10,
         border_size = 2,
         -- https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
@@ -352,8 +353,8 @@ hl.config({
         inactive_opacity = 1.0,
         shadow = {
             enabled = true,
-            range = 4,
-            render_power = 3,
+            range = 16,
+            render_power = 6,
             color = "rgba(1a1a1aee)",
         },
         -- https://wiki.hypr.land/Configuring/Variables/#blur
@@ -402,7 +403,7 @@ hl.config({
         kb_options = "",
         kb_rules = "",
         repeat_rate = 50,
-        repeat_delay = 350,
+        repeat_delay = 333,
         follow_mouse = 2,
         sensitivity = 0.3, -- -1.0 - 1.0, 0 means no modification.
         touchpad = {
