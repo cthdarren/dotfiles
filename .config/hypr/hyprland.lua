@@ -31,7 +31,7 @@ hl.monitor({
 hl.monitor({
     output = "DP-6",
     mode = "3440x1440@100",
-    position = "1920x-160",
+    position = "1920x-360",
     scale = "1",
 })
 
@@ -269,10 +269,10 @@ hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.move({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + k", hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + j", hl.dsp.window.move({ direction = "d" }))
 
-hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" , repeating = "true" }))
+hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" , repeating = "true" }))
+hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up", repeating = "true"  }))
+hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down", repeating = "true"  }))
 
 hl.bind(mainMod .. " + 1", hl.dsp.focus({ workspace = 1 }))
 hl.bind(mainMod .. " + 2", hl.dsp.focus({ workspace = 2 }))
@@ -407,6 +407,9 @@ hl.config({
         touchpad = {
             natural_scroll = true,
         },
+    },
+    cursor = {
+        inactive_timeout = 5
     },
     -- Example per-device config
     -- See https://wiki.hypr.land/Configuring/Keywords/#per-device-input-configs for more
