@@ -269,10 +269,10 @@ hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.move({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + k", hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + j", hl.dsp.window.move({ direction = "d" }))
 
-hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" , repeating = "true" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" , repeating = "true" }))
-hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up", repeating = "true"  }))
-hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down", repeating = "true"  }))
+hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }), { repeating = true })
+hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }), { repeating = true })
+hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }), { repeating = true })
+hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }), { repeating = true })
 
 hl.bind(mainMod .. " + 1", hl.dsp.focus({ workspace = 1 }))
 hl.bind(mainMod .. " + 2", hl.dsp.focus({ workspace = 2 }))
@@ -328,6 +328,7 @@ hl.window_rule({
 
 hl.config({
     general = {
+        no_focus_fallback = true,
         gaps_in = 3,
         gaps_out = 10,
         border_size = 2,
