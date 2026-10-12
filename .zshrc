@@ -33,9 +33,12 @@ alias gs='git status'
 alias ll='ls -alh --color=auto'
 alias rough='nvim /home/lingyuan/todotmr.md'
 alias lk='ls -altrh --color=auto'
+alias kct='kubectx'
+alias kns='kubens'
 alias connectspk='bluetoothctl connect F8:DF:15:D4:98:F0'
 alias connecthp='bluetoothctl connect 38:18:4C:5A:8B:A6'
 alias connectkb='bluetoothctl connect D9:D2:5F:C0:75:AC'
+alias connectearp='bluetoothctl connect 38:FB:A0:32:AC:B6'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gco='git checkout'
 alias gpush='git push origin `git rev-parse --abbrev-ref HEAD`'
@@ -59,3 +62,4 @@ export GTK_THEME=Adwaita:dark
 export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc 
 export QT_STYLE_OVERRIDE=Adwaita-Dark
 
+source .ventirc

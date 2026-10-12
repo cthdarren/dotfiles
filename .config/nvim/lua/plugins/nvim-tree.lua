@@ -1,13 +1,11 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	version = "*",
-	lazy = false,
+    lazy = false,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
+    cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeFocus" },
 	config = function()
-		local api = require("nvim-tree.api")
-		vim.keymap.set("n", "<C-b>", api.tree.toggle, {})
 		require("nvim-tree").setup({
 			actions = {
 				open_file = {
@@ -18,5 +16,7 @@ return {
 				enable = true,
 			},
 		})
+		local api = require("nvim-tree.api")
+		vim.keymap.set("n", "<C-b>", api.tree.toggle, {})
 	end,
 }
